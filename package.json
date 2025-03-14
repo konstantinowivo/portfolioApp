@@ -1,0 +1,67 @@
+{
+  "name": "portfolios-dev",
+  "private": true,
+  "description": "portfolio template",
+  "keywords": [
+    "portfolio",
+    "astro",
+    "porfolio-template",
+    "astrojs",
+    "astro-template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konstantinowivo/portfolioApp.git"
+  },
+  "license": "MIT",
+  "author": "Ivo Konstantinow <ivokonstantinow@gmail.com>",
+  "scripts": {
+    "build:ru": "pnpm -C rainbow-unicorn build",
+    "build:us": "pnpm -C unicorn-sparkle build",
+    "dev:ru": "pnpm -C rainbow-unicorn dev",
+    "performance:us": "lighthouse-badges -u https://unicorn-sparkle.web.app/ -o ./unicorn-sparkle/performance/ -b for-the-badge",
+    "prepare": "husky",
+    "preview:ru": "pnpm -C rainbow-unicorn preview",
+    "preview:us": "pnpm -C unicorn-sparkle preview"
+  },
+  "lint-staged": {
+    "./**/*.{js,mjs,cjs}": [
+      "eslint --cache --fix --ext .js,.mjs,.cjs ./",
+      "prettier --cache --write \"./**/*.{js,mjs,cjs}\""
+    ],
+    "./**/*.ts": [
+      "eslint --cache --fix --ext .ts ./",
+      "prettier --cache --write \"./**/*.ts\""
+    ],
+    "./**/*.astro": [
+      "eslint --cache --fix --ext .astro ./",
+      "prettier --cache --write \"./**/*.astro\""
+    ],
+    "./**/*.css": "prettier --cache --write \"./**/*.css\"",
+    "./**/*.json": "prettier --cache --write \"./**/*.json\"",
+    "./**/*.yml": "prettier --cache --write \"./**/*.yml\""
+  },
+  "dependencies": {
+    "lighthouse-badges": "1.3.8"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.4.1",
+    "@typescript-eslint/eslint-plugin": "7.0.1",
+    "@typescript-eslint/parser": "7.0.0",
+    "astro-eslint-parser": "1.2.1",
+    "eslint": "8.57.0",
+    "eslint-config-love": "47.0.0",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-astro": "1.3.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-promise": "6.1.1",
+    "husky": "9.1.7",
+    "lint-staged": "15.4.3",
+    "prettier": "3.4.2",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "0.6.6"
+  }
+}
